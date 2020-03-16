@@ -25,7 +25,7 @@ SECRET_KEY = '1)gf2%d5)bey)8&dew$hkqo5idrp2nq2&)s1q-_9dt3ni&31b#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.43.129', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.43.129', 'localhost', '127.0.0.1', 'apidjango.herokuapp.com']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'apiapp',
 ]
 
@@ -121,8 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
